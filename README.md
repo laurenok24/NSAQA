@@ -1,2 +1,3 @@
 # NSAQA
+Hierarchical NeuroSymbolic Approach for Action Quality Assessment
 Coming soon...
