@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <br>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+    </style>
+    <!-- <br> -->
+    <table style="width:100%">
+        <tr>
+            <td>Your dive was {{overall_score_desc}}, and scored a <strong>{{overall_score}}</strong>.  Here is how we scored each component of the dive. Each percentile is relative to dives in the semifinals and finals of Olympic and World Championship competitions.</td>
+        </tr>
+    </table>
+    <table style="width:100%">
+        <tr>
+            <th style="width:10%">Error</th>
+            <th style="width:70%">Description</th>
+            <th style="width:60%">Visuals</th>
+            <th style="width:10%">Score</th>
+        </tr>
+        <tr>
+            <td>Feet Apart</td>
+            <td>We found that your leg separation angle was on average {{feet_apart_score}}° for your dive. 
+                This is rated as {{feet_apart_percentile}} percentile.</td>
+            <td>
+                {% if has_feet_apart_peaks %} 
+                    <!-- gif  -->
+                    <img src="data:image/gif;base64,{{feet_apart_gif}}" alt="Feet Apart GIF" width="400" height="200">
+                {%else%}
+                    There were no particular instances to show where your feet came apart.
+                {%endif%}
+            </td>
+            <td>
+                {{feet_apart_percentile_divided_by_ten}}
+            </td>
+        </tr>
+        {% if include_height_off_platform %}
+        <tr>
+            <td>Height off platform</td>
+            <td>Your jump was {{height_off_board_description}}, and was rated as {{height_off_board_percentile}} percentile. Here is the highest you jumped off the platform.</td>
+            <td>
+                <img src='data:image/jpg;base64, {{encoded_height_off_board_frame}}' width="400" height="200">
+            </td>
+            <td>
+                {{height_off_board_percentile_divided_by_ten}}
+            </td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td>Distance from platform</td>
+            <td>You were {{dist_from_board_percentile}} the platform. Here is where you came closest to the platform.</td>
+            <td>
+                <!-- <img src='{{local_directory}}/{{dist_from_board_frame}}' width="200" height="100"> -->
+                <img src='data:image/jpg;base64, {{encoded_dist_from_board_frame}}' width="400" height="200">
+            </td>
+            <td>
+                {{dist_from_board_percentile_status}}
+            </td>
+        </tr>
+        {% if som_position_tightness_frames|length > 0 %}
+        <tr>
+            <td>Somersault tightness</td>
+            <td>
+                We found that the tightness of your {{som_position_tightness_position}} was {{som_position_tightness_score}}° on average. 
+                This is rated as {{som_position_tightness_percentile}} percentile. Here are some examples of your position in the somersault.
+            </td>
+            {% if knee_bend_frames|length > 0 %}
+            <td rowspan="2">
+                <!-- gif  -->
+                <img src="data:image/gif;base64,{{som_position_tightness_gif}}" alt="Somersault GIF" width="400" height="200">
+            </td>
+            {% else %}
+            <td>
+                <!-- gif  -->
+                <img src="data:image/gif;base64,{{som_position_tightness_gif}}" alt="Somersault GIF" width="400" height="200">
+            </td>
+            {% endif %}
+            <td>
+                {{som_position_tightness_percentile_divided_by_ten}}
+            </td>
+        </tr>
+        {% endif %}
+        {% if knee_bend_frames|length > 0 %}
+        <tr>
+            <td>Knee straightness</td>
+            <td>
+                We found that your knees bent {{knee_bend_score}}° on average.
+                This is rated as {{knee_bend_percentile}} percentile.
+            </td>
+            <td>
+                {{knee_bend_percentile_divided_by_ten}}
+            </td>
+        </tr>
+        {% endif %}
+        {% if is_twister %}
+        <tr>
+            <td>
+                Twist Straightness
+            </td>
+            <td>
+                We found that the tightness of your {{twist_position_tightness_position}} was {{twist_position_tightness_score}}° on average. 
+                This is rated as {{twist_position_tightness_percentile}} percentile. Here are some examples of your position in the somersault.
+            </td>
+            <td>
+                <!-- gif  -->
+                <img src="data:image/gif;base64,{{twist_position_tightness_gif}}" alt="Twist GIF" width="400" height="200">
+            </td>
+            <td>
+                {{twist_position_tightness_percentile_divided_by_ten}}
+            </td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td>
+                Verticalness (over/under rotation)
+            </td>
+            <td>
+                We found that you deviated from vertical by {{over_under_rotation_score}}°, which was the {{over_under_rotation_percentile}} percentile. 
+            </td>
+            <td rowspan="2">
+                <!-- gif  -->
+                <img src="data:image/gif;base64,{{straightness_during_entry_gif}}" alt="Entry GIF" width="400" height="200">
+            </td>
+            <td>
+                {{over_under_rotation_percentile_divided_by_ten}}
+            </td>
+        </tr>
+        <tr>
+            <td>Body straightness during entry</td>
+            <td>The straightness of your body during entry deviated by {{straightness_during_entry_score}}°, which was the {{straightness_during_entry_percentile}} percentile. </td>
+            <td>{{straightness_during_entry_percentile_divided_by_ten}}</td>
+        </tr>
+        <tr>
+            <td>Splash</td>
+            <td>Your splash was {{splash_description}} and rated as {{splash_percentile}} percentile. </td>
+            <td>
+                <!-- gif  -->
+                <img src="data:image/gif;base64,{{splash_gif}}" alt="Splash GIF" width="400" height="200">
+            </td>
+            <td>
+                {{splash_percentile_divided_by_ten}}
+            </td>
+        </tr>
+
+    </table>
+</html>
+
+
