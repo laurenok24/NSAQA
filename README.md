@@ -1,4 +1,5 @@
-# Neuro-Symbolic AQA (NS-AQA)
+# Neuro-Symbolic AQA (NS-AQA) 
+## 🏆 CVPR 2024 CVSports Best Paper Award
 This repository contains the Python code implementation of NS-AQA for platform diving.
 
 Technical Paper: [link](https://arxiv.org/abs/2403.13798)
