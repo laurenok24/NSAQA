@@ -1,9 +1,9 @@
 # Neuro-Symbolic AQA (NS-AQA)
 This repository contains the Python code implementation of NS-AQA for platform diving.
 
-Technical Paper:
+Technical Paper: [link](https://arxiv.org/abs/2403.13798)
 
-Demo:
+Demo: [link](https://huggingface.co/spaces/X-NS/NSAQA)
 
 ## Overview
 We propose a neuro-symbolic paradigm for AQA.
