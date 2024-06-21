@@ -23,3 +23,12 @@ python nsaqa_finediving.py x y
 # e.g. if the instance id is ('01', 1)
 python nsaqa_finediving.py 01 1
 ```
+
+## Please consider citing our work:
+@inproceedings{okamoto2024hierarchical,
+  title={Hierarchical NeuroSymbolic Approach for Comprehensive and Explainable Action Quality Assessment},
+  author={Okamoto, Lauren and Parmar, Paritosh},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3204--3213},
+  year={2024}
+}
