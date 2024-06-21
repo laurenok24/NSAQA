@@ -25,6 +25,7 @@ python nsaqa_finediving.py 01 1
 ```
 
 ## Please consider citing our work:
+```
 @inproceedings{okamoto2024hierarchical,
   title={Hierarchical NeuroSymbolic Approach for Comprehensive and Explainable Action Quality Assessment},
   author={Okamoto, Lauren and Parmar, Paritosh},
@@ -32,3 +33,4 @@ python nsaqa_finediving.py 01 1
   pages={3204--3213},
   year={2024}
 }
+```
