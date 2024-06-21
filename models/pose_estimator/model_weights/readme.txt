@@ -1,3 +1,3 @@
-You will need to install the HRNet model: https://github.com/leoxiaobin/deep-high-resolution-net.pytorch
+Download model weights for HRNet: https://drive.google.com/drive/folders/1sdiGj9lnhNi0-Nix-wSSQeMgYHPMSFCQ?usp=sharing
 
-Additionally, you will need to add pose_hrnet.py (found at https://github.com/leoxiaobin/deep-high-resolution-net.pytorch/blob/master/lib/models/pose_hrnet.py) to this folder.
+If you wish to train the models on your own, here are the annotations we hand annotated for training: https://drive.google.com/drive/folders/1_lKxYwdvWRqxt3YkV4sABbbY7fWhaQSA?usp=sharing
