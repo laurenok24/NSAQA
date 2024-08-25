@@ -1,4 +1,4 @@
-⚠️ ***Please note that all materials are available for non-commercial use only.*** ⚠️ Please do not use any of our materials for any commercial purposes in any form or capacity.
+⚠️ ***Please note that all materials (codes, dataset, etc.) are available for non-commercial use only.*** ⚠️ Please refrain from using the materials for any commercial purposes in any form or capacity.
 
 # Neuro-Symbolic AQA (NS-AQA) 
 ## 🏆 CVPR 2024 CVSports Best Paper Award
