@@ -6,7 +6,7 @@ This repository contains the Python code implementation of NS-AQA for platform d
 
 Technical Paper: [link](https://arxiv.org/abs/2403.13798)
 
-Demo: [link](https://huggingface.co/spaces/X-NS/NSAQA)
+Huggingface Demo: [link](https://huggingface.co/spaces/X-NS/NSAQA)
 
 ## Overview
 We propose a neuro-symbolic paradigm for AQA.
